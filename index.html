@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- =========================
+         META & DOCUMENT SETUP
+         ========================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Harley Jackson | Portfolio</title>
+
+    <!-- Improves security for external links -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- =========================
+         STYLES & FONTS
+         ========================= -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- =========================
+         SKIP LINK (ACCESSIBILITY)
+         ========================= -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- =========================
+         ANIMATED BACKGROUND
+         ========================= -->
+    <div class="background" aria-hidden="true">
+      <!-- Ambient glow orbs -->
+      <div class="orb orb--one"></div>
+      <div class="orb orb--two"></div>
+      <div class="orb orb--three"></div>
+
+      <!-- Subtle grid overlay -->
+      <div class="grid"></div>
+
+      <!-- Floating 3D decorative shapes -->
+      <div class="floating-3d">
+        <div class="shape shape--diamond" data-speed="0.3"></div>
+        <div class="shape shape--torus" data-speed="0.4"></div>
+        <div class="shape shape--prism" data-speed="0.2"></div>
+        <div class="shape shape--panel" data-speed="0.35"></div>
+      </div>
+    </div>
+
+    <!-- =========================
+         HEADER / NAVIGATION
+         ========================= -->
+    <header class="nav" aria-label="Primary navigation">
+      <!-- Logo / Branding -->
+      <div class="logo" aria-label="Harley Jackson logo">HJ</div>
+
+      <!-- Main navigation links -->
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- CV Download -->
+      <a
+        class="button button--primary"
+        href="./cv/Harley_Jackson_Tech_CV_2026.pdf"
+        download
+        aria-label="Download CV"
+      >
+        CV
+      </a>
+    </header>
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main id="main">
+      <!-- =========================
+           HERO SECTION
+           ========================= -->
+      <section id="home" class="hero-new" aria-label="Introduction">
+        <div class="hero-new__content">
+          <img src="images/my_headshot.jpg" alt="Harley Jackson" class="headshot">
+          <p class="eyebrow">Liverpool, UK</p>
+
+          <h1 class="hero-new__title">Harley Jackson</h1>
+
+          <p class="hero-new__subtitle">
+            Computer Science student with strong technical foundations, building
+            practical software and systems across a range of problem domains.
+          </p>
+
+          <!-- Primary actions -->
+          <div class="hero-new__actions">
+            <a class="button button--primary" href="#projects">View Projects</a>
+            <a class="button button--ghost" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="hero-new__stats" aria-label="Quick statistics">
+          <div class="stat-float">
+            <span class="stat-float__value">10</span>
+            <span class="stat-float__label">Projects</span>
+          </div>
+          <div class="stat-float">
+            <span class="stat-float__value">2026</span>
+            <span class="stat-float__label">Graduate</span>
+          </div>
+          <div class="stat-float">
+            <span class="stat-float__value">3</span>
+            <span class="stat-float__label">Technical Domains</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           ABOUT SECTION
+           ========================= -->
+      <section id="about" class="about-new scroll-fade">
+        <div class="about-new__container">
+          <div class="about-new__eyebrow">
+            <span class="pulse" aria-hidden="true"></span>
+            <p>Currently focused on</p>
+          </div>
+
+          <h2 class="about-new__title">
+            Building reliable software and systems through strong technical foundations
+          </h2>
+
+          <div class="about-new__grid">
+            <article class="about-new__card">
+              <h3>Background</h3>
+              <p>
+                Computer Science student with strong technical foundations and an interest
+                in building reliable, well-structured software and systems. I enjoy solving
+                real-world problems and working across different areas of technology.
+              </p>
+            </article>
+
+            <article class="about-new__card">
+              <h3>Focus Areas</h3>
+              <p>
+                Software development, systems programming, data-driven applications,
+                and foundational IT concepts, with experience across multiple technical areas.
+              </p>
+            </article>
+
+            <article class="about-new__card">
+              <h3>Tech Stack</h3>
+              <div class="tech-pills" aria-label="Technology stack">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>C++</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>OpenGL</span>
+                <span>TensorFlow</span>
+                <span>Docker</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           PROJECTS SECTION
+           ========================= -->
+      <section id="projects" class="projects-new scroll-fade">
+        <header class="section__header">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Featured Projects</h2>
+        </header>
+
+        <!-- PROJECT 01 -->
+        <article class="project-new">
+          <div class="project-new__visual">
+            <div class="project-new__number">01</div>
+            <div class="project-new__meta">AI · Machine Learning</div>
+          </div>
+
+          <div class="project-new__content">
+            <h3>Voice Demographics Net</h3>
+            <p class="project-new__desc">
+              Machine learning system that predicts speaker gender and age group
+              from voice recordings using extracted acoustic features.
+            </p>
+
+            <div class="project-new__details">
+              <div class="detail-block">
+                <h4>Tech</h4>
+                <p>Python, MFCC, MLP Neural Network</p>
+              </div>
+              <div class="detail-block">
+                <h4>Focus</h4>
+                <p>Feature extraction, model evaluation, bias awareness</p>
+              </div>
+            </div>
+
+            <div class="badges">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Audio Processing</span>
+            </div>
+
+            <div class="project-new__links">
+              <a
+                href="https://github.com/harljackson/VoiceDemographicsNet"
+                class="link-arrow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 02 -->
+        <article class="project-new project-new--reverse">
+          <div class="project-new__visual">
+            <div class="project-new__number">02</div>
+            <div class="project-new__meta">AI · Web</div>
+          </div>
+
+          <div class="project-new__content">
+            <h3>Weather Intelligence System</h3>
+            <p class="project-new__desc">
+              AI-powered web application that predicts rainfall probability
+              with interactive visualisations and historical insights.
+            </p>
+
+            <div class="project-new__details">
+              <div class="detail-block">
+                <h4>Tech</h4>
+                <p>JavaScript, TensorFlow.js, Chart.js</p>
+              </div>
+              <div class="detail-block">
+                <h4>Focus</h4>
+                <p>Data-driven decision support and UX clarity</p>
+              </div>
+            </div>
+
+            <div class="badges">
+              <span>JavaScript</span>
+              <span>TensorFlow.js</span>
+              <span>Data Visualisation</span>
+            </div>
+
+            <div class="project-new__links">
+              <a
+                href="https://github.com/harljackson/WeatherIntelligenceSystemJavascript-BasedPredictionUsingTensorFlow.js"
+                class="link-arrow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 03 -->
+        <article class="project-new">
+          <div class="project-new__visual">
+            <div class="project-new__number">03</div>
+            <div class="project-new__meta">C++ · Graphics</div>
+          </div>
+
+          <div class="project-new__content">
+            <h3>Interactive 3D Model Viewer</h3>
+            <p class="project-new__desc">
+              Real-time interactive 3D model viewer built in C++ using OpenGL,
+              featuring lighting, transformations, camera controls, and UI panels.
+            </p>
+
+            <div class="project-new__details">
+              <div class="detail-block">
+                <h4>Tech</h4>
+                <p>C++, OpenGL, GLFW, ImGui</p>
+              </div>
+              <div class="detail-block">
+                <h4>Focus</h4>
+                <p>Rendering pipeline, shaders, performance</p>
+              </div>
+            </div>
+
+            <div class="badges">
+              <span>C++</span>
+              <span>OpenGL</span>
+              <span>Computer Graphics</span>
+            </div>
+
+            <div class="project-new__links">
+              <a
+                href="https://github.com/harljackson/3d-model-viewer"
+                class="link-arrow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 04 -->
+        <article class="project-new project-new--reverse">
+          <div class="project-new__visual">
+            <div class="project-new__number">04</div>
+            <div class="project-new__meta">C++ · Systems</div>
+          </div>
+
+          <div class="project-new__content">
+            <h3>Smart Home Automation & Energy Management System</h3>
+
+            <p class="project-new__desc">
+              A C++ object-oriented smart home simulation that allows users to monitor
+              and control virtual devices, track energy usage, and manage user access
+              within a home environment.
+            </p>
+
+            <div class="project-new__details">
+              <div class="detail-block">
+                <h4>Architecture</h4>
+                <p>Object-oriented design with modular device components</p>
+              </div>
+
+              <div class="detail-block">
+                <h4>Focus</h4>
+                <p>Systems design, energy monitoring, and access control</p>
+              </div>
+            </div>
+
+            <div class="badges">
+              <span>C++</span>
+              <span>Object-Oriented Design</span>
+              <span>CMake</span>
+              <span>Systems Programming</span>
+            </div>
+
+            <div class="project-new__links">
+              <a
+                href="https://github.com/harljackson/smart-home-system"
+                class="link-arrow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- =========================
+           EXPERIENCE SECTION
+           ========================= -->
+      <section id="experience" class="experience-new scroll-fade">
+        <header class="section__header">
+          <p class="eyebrow">Background</p>
+          <h2>Education & Experience</h2>
+        </header>
+
+        <div class="experience-new__timeline">
+          <article class="experience-new__card">
+            <div class="experience-new__year">2022—2026(Expected)</div>
+            <div class="experience-new__content">
+              <h3>BSc Computer Science</h3>
+              <p class="experience-new__location">Liverpool Hope University</p>
+              <p>
+                Focus on algorithms and data structures, systems programming, cybersecurity fundamentals, and software engineering,
+                supported by multiple practical and deployable projects.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-new__card">
+            <div class="experience-new__year">Ongoing</div>
+            <div class="experience-new__content">
+              <h3>Certifications & Learning</h3>
+              <p class="experience-new__location">Professional Development</p>
+
+              <ul class="cert-list">
+                <li class="cert-item">
+                  <p>Responsive Web Design Certification – freeCodeCamp</p>
+                  <span>HTML, CSS, Accessibility, Responsive Layouts</span>
+                </li>
+
+                <li class="cert-item">
+                  <p>TryHackMe – IT & Security Fundamentals</p>
+                  <span>In Progress</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+           CONTACT SECTION
+           ========================= -->
+      <section id="contact" class="contact-new scroll-fade">
+        <div class="contact-new__container">
+          <p class="eyebrow">Get in Touch</p>
+          <h2 class="contact-new__title">Let's Build Something</h2>
+
+          <p class="contact-new__subtitle">
+            Open to entry-level and graduate roles, technical support positions,
+            and opportunities to grow within a professional tech environment.
+          </p>
+
+          <div class="contact-new__actions">
+            <a class="button button--primary" href="mailto:harleyjackson.dev@gmail.com">
+              Email Me
+            </a>
+            <a
+              class="button button--ghost"
+              href="https://www.linkedin.com/in/harley-louis-jackson"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              class="button"
+              href="https://github.com/harljackson"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer class="footer">
+      <p>© 2026 Harley Jackson</p>
+      <div class="footer__links">
+        <a href="https://github.com/harljackson" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/harley-louis-jackson"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </footer>
+
+    <!-- =========================
+         SCRIPTS
+         ========================= -->
+    <script src="script.js"></script>
+  </body>
+</html>
