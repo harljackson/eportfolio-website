@@ -264,6 +264,10 @@ section {
   width: 100%;
 }
 
+.nav__cv {
+  display: none;
+}
+
 .logo {
   font-weight: 700;
   letter-spacing: 2px;
