@@ -172,7 +172,7 @@ if (navToggle && navLinksContainer) {
     navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
   });
 
-  nav.querySelectorAll("a").forEach((link) => {
+  navLinksContainer.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMobileNav);
   });
 
