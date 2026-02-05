@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 // ==========================================
 // INTERSECTION OBSERVER FOR SCROLL ANIMATIONS
 // ==========================================
@@ -150,6 +152,53 @@ window.addEventListener("scroll", () => {
   
   lastScroll = currentScroll;
 });
+
+// ==========================================
+// MOBILE NAV TOGGLE
+// ==========================================
+const navToggle = document.querySelector(".nav__toggle");
+const navLinksContainer = document.querySelector(".nav__links");
+
+const closeMobileNav = () => {
+  nav.classList.remove("nav--open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  navToggle?.setAttribute("aria-label", "Open navigation menu");
+};
+
+if (navToggle && navLinksContainer) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("nav--open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  });
+
+  navLinksContainer.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileNav);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!nav.classList.contains("nav--open")) return;
+    if (!window.matchMedia("(max-width: 900px)").matches) return;
+
+    const clickedInsideNav = nav.contains(event.target);
+    if (!clickedInsideNav) {
+      closeMobileNav();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileNav();
+      navToggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) {
+      closeMobileNav();
+    }
+  });
+}
 
 // ==========================================
 // PROJECT CARDS TILT EFFECT (OPTIONAL)
