@@ -12,6 +12,16 @@
     <!-- Improves security for external links -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+    <!-- Security hardening for static hosting (GitHub Pages-safe) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="accelerometer=(), autoplay=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    />
+
     <!-- =========================
          STYLES & FONTS
          ========================= -->
@@ -62,14 +72,36 @@
          ========================= -->
     <header class="nav" aria-label="Primary navigation">
       <!-- Logo / Branding -->
-      <div class="logo" aria-label="Harley Jackson logo">HJ</div>
+      <a class="logo" href="#home" aria-label="Go to home section">HJ</a>
+
+      <!-- Mobile menu toggle -->
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-haspopup="true"
+        aria-label="Open navigation menu"
+      >
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+      </button>
 
       <!-- Main navigation links -->
-      <nav>
+      <nav id="primary-nav" class="nav__links">
         <a href="#about">About</a>
         <a href="#projects">Work</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+        <a
+          class="nav__cv button button--primary"
+          href="./documents/Harley_Jackson_Tech_CV_2026.pdf"
+          download
+          aria-label="Download CV"
+        >
+          Download CV
+        </a>
       </nav>
 
       <!-- CV Download -->
@@ -469,6 +501,6 @@
     <!-- =========================
          SCRIPTS
          ========================= -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
