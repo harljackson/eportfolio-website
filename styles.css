@@ -972,7 +972,7 @@ section {
   }
 
   .js .nav.nav--open .nav__links {
-    max-height: 380px;
+    max-height: 320px;
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
@@ -987,20 +987,6 @@ section {
 
   .nav__links a:hover {
     background: rgba(96, 165, 250, 0.12);
-  }
-
-  .js .nav.nav--open .nav__cv {
-    display: inline-flex;
-    justify-content: center;
-    margin-top: 4px;
-  }
-
-  .js .nav.nav--open .nav__cv:hover {
-    background: linear-gradient(120deg, var(--accent), var(--accent-2));
-  }
-
-  .js .nav.nav--open .nav__cv::after {
-    display: none;
   }
 }
 
